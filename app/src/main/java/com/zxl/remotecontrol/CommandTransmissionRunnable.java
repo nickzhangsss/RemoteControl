@@ -17,7 +17,7 @@ public class CommandTransmissionRunnable implements Runnable {
 
     private Object o;
 
-    private static final String IP = "192.168.0.5";
+    private static String IP = "";
     private static final int PORT = 9695;
 
     private Socket socket = null;
@@ -54,5 +54,7 @@ public class CommandTransmissionRunnable implements Runnable {
         }
     }
 
-
+    public static void setIP(String IP) {
+        CommandTransmissionRunnable.IP = IP;
+    }
 }
